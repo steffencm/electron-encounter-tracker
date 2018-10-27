@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Create a new encounter</h1>
+<div mat-dialog-content>
+  <p>What is the name of the encounter</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.name">
+  </mat-form-field>
+  <p>What is a brief summary of the encounter</p>
+  <mat-form-field>
+    <input matInput [(ngModel)]="data.summary">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Save</button>
+</div>

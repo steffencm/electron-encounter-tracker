@@ -1,0 +1,11 @@
+<div class="encounter-list">
+  <div class="encounter-list-header">
+    <h2>Your Encounters</h2>
+    <button mat-stroked-button color="primary" (click)="openDialog()" >Create New Encounter</button>
+  </div>
+  <div class="encounter-list-items" cdkDropList (cdkDropListDropped)="drop($event)">
+    <mat-list-item *ngFor="let encounter of encounters" cdkDrag>
+      <app-encounter-list-item [encounterName]="encounter.name" [encounterSummary]="encounter.summary"></app-encounter-list-item>
+    </mat-list-item>
+  </div>
+</div>
